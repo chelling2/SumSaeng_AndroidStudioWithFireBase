@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bubble_background"
+    android:backgroundTint="@color/green_6">
+
+    <!-- 이미지 뷰 -->
+    <ImageView
+        android:id="@+id/chat_uploadImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- 이미지뷰 시간 텍스트뷰 (내 메시지) -->
+    <TextView
+        android:id="@+id/image_chat_time_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/chat_uploadImage"
+        android:layout_alignBottom="@id/chat_uploadImage"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"/>
+
+    <!-- 이미지뷰 시간 텍스트뷰 (상대방 메시지) -->
+    <TextView
+        android:id="@+id/image_chat_time_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chat_uploadImage"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:layout_alignBottom="@id/chat_uploadImage"
+        android:visibility="gone"/>
+
+    <!-- 날짜 텍스트뷰 -->
+    <TextView
+        android:id="@+id/chat_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_bg"
+        android:padding="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 메시지 텍스트뷰 -->
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:maxWidth="280dp"
+        android:padding="8dp"
+        android:textColor="@android:color/black" />
+
+    <!-- 시간 텍스트뷰 (내 메시지) -->
+    <TextView
+        android:id="@+id/chat_time_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/messageTextView"
+        android:layout_alignBottom="@id/messageTextView"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 시간 텍스트뷰 (상대방 메시지) -->
+    <TextView
+        android:id="@+id/chat_time_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/messageTextView"
+        android:layout_alignBottom="@id/messageTextView"
+        android:layout_marginStart="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
